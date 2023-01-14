@@ -1,0 +1,22 @@
+<doctype html>
+    <title>System information</title>
+  <p>
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          <ul class=flashes>
+          {% for message in messages %}
+            <li>{{ message }}</li>
+          {% endfor %}
+          </ul>
+        {% endif %}
+      {% endwith %}
+  </p>
+{{ table }}
+<table border='1'>
+  <tr><td>最大储户</td><td>系统资金流通总量</td></tr>
+  <tr><td>{{name}}</td><td>{{amount}}</td></tr>
+</table>
+<img src="/number-of-users.png"
+     alt="random points as png"
+     height="400"
+>

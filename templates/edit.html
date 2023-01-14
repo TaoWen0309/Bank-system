@@ -1,0 +1,32 @@
+<doctype html>
+    <title>Edit - User</title>
+    <h2>Edit User</h2>
+    <form method="post" action="/update">
+        <dl>
+            <p>
+                <input name="inputId" value="{{ row['id'] }}" type="text" placeholder="Id" autocomplete="off" required>
+            </p>
+            <p>
+                <input name="inputAccountNumber" value="{{ row['number'] }}" type="text" placeholder="AccountNumber" autocomplete="off" required>
+            </p>
+            <p>
+                <input name="inputCardID" value="" type="text" placeholder="CardID(1/2)" autocomplete="off" required>
+            </p>
+            <p>
+                <input name="inputPassword" value="" type="password" placeholder="Password" autocomplete="off" required>
+            </p>
+            <p>
+                <input name="inputAction" value="" type="text" placeholder="存款/取款/转款" autocomplete="off" required>
+            </p>
+            <p>
+                <input name="inputMoney" value="" type="text" placeholder="Money" autocomplete="off" required>
+            </p>
+            <p>
+                <input name="inputOtherAccountNumber" value="" type="text" placeholder="款项接收方账户 非转款请忽略此项" autocomplete="off">
+            </p>
+        </dl>
+        <p>
+            <input name="id" value="{{ row['id'] }}" type="hidden">
+            <input type="submit" value="Submit">
+        </p>
+    </form>

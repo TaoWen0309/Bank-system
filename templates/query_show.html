@@ -1,0 +1,22 @@
+<doctype html>
+    <title>List of Records - Bank User</title>
+  <p>
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          <ul class=flashes>
+          {% for message in messages %}
+            <li>{{ message }}</li>
+          {% endfor %}
+          </ul>
+        {% endif %}
+      {% endwith %}
+  </p>
+{{ table }}
+<table border='1'>
+  <tr><td>转入总金额</td><td>转出总金额</td></tr>
+  <tr><td>{{inVal}}</td><td>{{outVal}}</td></tr>
+</table>
+<img src="/balances-{{number}}.png"
+     alt="random points as png"
+     height="400"
+>

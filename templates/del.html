@@ -1,0 +1,17 @@
+<doctype html>
+    <title>Delete User - Bank</title>
+    <h2>Delete User</h2>
+    <form method="post" action="/check_delete">
+        <dl>
+            <p>
+                <input name="inputId" value="{{ row['id'] }}" type="text" placeholder="Id" autocomplete="off" required>
+            </p>
+            <p>
+                <input name="inputPassword" value="" type="password" placeholder="Password" autocomplete="off" required>
+            </p>
+        </dl>
+        <p>
+            <input name="id" value="{{ row['id'] }}" type="hidden">
+            <input type="submit" value="Submit">
+        </p>
+    </form>
